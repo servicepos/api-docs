@@ -9,7 +9,6 @@
     "start": "npx redoc-cli serve dist.json --options theme.json -t ./index-template.hbs",
     "bundle-local": "openapi bundle -o dist --force",
     "build": "npx redoc-cli bundle https://app.deltateq.com/doc/api/openapi.json -o index.html --options theme.json -t ./index-template.hbs",
-    "build-local": "npm run bundle-local && npx redoc-cli bundle dist.json -o index.html --options theme.json -t ./index-template.hbs",
-    "test": "openapi lint"
+    "build-local": "npm run bundle-local && npx redoc-cli bundle dist.json -o index.html --options theme.json -t ./index-template.hbs"
   }
 }
