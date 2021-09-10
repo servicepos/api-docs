@@ -1,0 +1,21 @@
+# See https://redoc.ly/docs/cli/configuration/ for more information.
+apiDefinitions:
+  main: ../bikematch-pos/doc/api/openapi.json
+lint:
+  extends:
+    - recommended
+  rules:
+    no-unused-components: warning
+referenceDocs:
+  pagination: section
+  theme:
+    colors:
+      primary:
+        main: '#57B145'
+    typography:
+      headings:
+        fontFamily: Roboto
+        fontWeight: '700'
+      fontFamily: 'Roboto, Verdana, Geneva, sans-serif'
+      fontSize: 14px
+  htmlTemplate: ./docs/index.html

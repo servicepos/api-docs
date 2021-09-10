@@ -1,0 +1,14 @@
+{
+  "name": "servicepos-api",
+  "version": "1.0.0",
+  "dependencies": {
+    "@redocly/openapi-cli": "^1.0.0-beta.58"
+  },
+  "private": true,
+  "scripts": {
+    "start": "npx redoc-cli serve dist.json --options theme.json -t ./index-template.hbs",
+    "bundle-local": "openapi bundle -o dist --force",
+    "build": "npx redoc-cli bundle https://app.deltateq.com/doc/api/openapi.json -o ./public/index.html --options ./theme.json -t ./index-template.hbs",
+    "build-local": "npm run bundle-local && npx redoc-cli bundle dist.json -o public/index.html --options theme.json -t ./index-template.hbs"
+  }
+}
