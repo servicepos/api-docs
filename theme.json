@@ -1,0 +1,17 @@
+{
+  "theme": {
+    "colors": {
+      "primary": {
+        "main": "#57B145"
+      }
+    },
+    "typography": {
+      "headings": {
+        "fontFamily": "Roboto",
+        "fontWeight": "700"
+      },
+      "fontFamily": "Roboto, Verdana, Geneva, sans-serif",
+      "fontSize": "14px"
+    }
+  }
+}
