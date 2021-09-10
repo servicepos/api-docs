@@ -12,6 +12,9 @@
       },
       "fontFamily": "Roboto, Verdana, Geneva, sans-serif",
       "fontSize": "14px"
+    },
+    "logo": {
+      "gutter": "20px 30px 14px 30px"
     }
   }
 }
