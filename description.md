@@ -1,7 +1,11 @@
-# Usage
+# General
+
+## Usage
+
 **Important:** The API is forward-compatible. We take the freedom to add **optional** attributes to endpoints without updating the version number. In this case, you should be aware that a PUT request replaces an entire object. i.e. not specifying a field on an object will **null** the field. To update a single field on e.g. a product you must first GET the product and then PUT the entire product with the new updated field. See example below.
 
-# Auth
+## Auth
+
 Send the header
 
 `Authtentication: Bearer <token>`
@@ -10,11 +14,34 @@ Send the header
 
 We recommand creating a new user for each integration.
 
+## Rate limiting
+
+API requests are subject to potential throttling to limit excess load on our servers.
+
+Throttling of requests is based on a _simple bucket resource model_ (similar to the leaking bucket algorithm, except the bucket fills up instead of leaking). You are free to make API requests until the resource bucket is depleted, after which requests will return an HTTP 429 error.
+
+The current bucket size is 80 and the filling (regen) rate is 8 requests per second. These limitations are subject change but are included within the HTTP response for throttled requests:
+
+```json
+{
+    "error": "API Resource limit reached.",
+    "bucket_size:" "80",
+    "bucket_regen": "8"
+}
+```
+
+## Configs
+
+A list of settings configs can be found [here](https://app.deltateq.com/doc/api/configs.php)
+
 # Examples
 
-## Update the stock of a product
+## PHP
 
-```<?php
+### Update the stock of a product
+
+```php
+<?php
 class ServicePOSException extends Exception
 {
 	public $err;
@@ -109,40 +136,29 @@ try {
 }
 ```
 
-# Rate limiting
-API requests are subject to potential throttling to limit excess load on our servers.
-
-Throttling of requests is based on a _simple bucket resource model_ (similar to the leaking bucket algorithm, except the bucket fills up instead of leaking). You are free to make API requests until the resource bucket is depleted, after which requests will return an HTTP 429 error.
-
-The current bucket size is 80 and the filling (regen) rate is 8 requests per second. These limitations are subject change but are included within the HTTP response for throttled requests:
-
-```
-{
-    "error": "API Resource limit reached.",
-    "bucket_size:" "80",
-    "bucket_regen": "8"
-}
-```
-
 # REST Hooks
+
 The ServicePOS API supports [REST Hooks](http://resthooks.org/). This allows you to subscribe to events in our system and get notified via a callback url immediately.
 
 To listen for events,
 
 `POST /api/hooks`
 with JSON object
-```
+
+```json
 {
     "event": "<event>",
     "url": "<url>"
 }
 ```
+
 This call returns a unique id for that subscription that is needed to manage the subscription.
 
 When the event triggers in our system, we will POST to the specified `url` with a relevant payload, for instance the product that was created in case of `product.created`.
 
-Events can be
-```
+Events can be:
+
+```js
 product.created
 product.updated
 product.deleted
@@ -185,7 +201,8 @@ REST hooks can also be specified via the app under Settings -> API.
 
 If the request returns **408** (Request Timeout), **429** (Too Many Requests) or **5xx** (Server Error) the server will **retry every 10th minute.**
 
-# Suppress Hooks
+## Suppress Hooks
+
 When using the API to make changes to your store, for instance create products, these interactions will trigger events like `product.created` just like using the app would.
 
 In some cases this behaviour is not desired since it can create infinite loops between services, for instance stock sync between ServicePOS and e-conomic.
@@ -193,6 +210,3 @@ In some cases this behaviour is not desired since it can create infinite loops b
 To avoid this, interact with the API with the following header
 `X-Suppress-Hooks:`
 The content of the header doesn't matter and is ignored.
-
-# Configs
-A list of settings configs can be found [here](https://app.deltateq.com/doc/api/configs.php)
