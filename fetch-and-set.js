@@ -2,6 +2,8 @@ const URL = 'https://app.deltateq.com/doc/api/openapi.json'
 const axios = require('axios')
 const fs = require('fs')
 
+const description = fs.readFileSync('./description.md').toString()
+
 axios.get(URL).then((res) => {
   let spec = res.data
 
@@ -11,6 +13,9 @@ axios.get(URL).then((res) => {
     backgroundColor: '#FFFFFF',
     altText: 'ServicePOS Logo',
   }
+
+  // Set description
+  spec.info.description = description
 
   fs.writeFileSync('./spec.json', JSON.stringify(spec))
 })
