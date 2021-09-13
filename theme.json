@@ -1,8 +1,14 @@
 {
   "theme": {
     "colors": {
+      "http": {
+        "get": "#57B145"
+      },
       "primary": {
         "main": "#57B145"
+      },
+      "text": {
+        "primary": "#21272F"
       }
     },
     "typography": {
