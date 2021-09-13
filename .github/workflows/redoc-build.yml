@@ -21,4 +21,4 @@ jobs:
         publish_dir: ./public
         force_orphan: true
         exclude_assets: '.github,openapi,.redocly.yaml,LICENSE,README.md'
-        #cname: servicepos
+        cname: api-docs.servicepos.com
