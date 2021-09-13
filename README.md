@@ -10,7 +10,7 @@ Extra information like code examples and general information about the api is or
 
 ## Scripts
 
-`npm run build`: This bundles the pages markdown, then fetches the remote openapi.json from https://app.deltateq.com/doc/api/openapi.json and builds a zero-dep static html file from that.
+`npm run build`: This bundles the pages markdown, then fetches the remote openapi.json from [here](https://app.deltateq.com/doc/api/openapi.json) and builds a zero-dep static html file from that.
 
 ## Changing the theme and html
 
