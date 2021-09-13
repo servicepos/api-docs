@@ -15,7 +15,7 @@ jobs:
     - name: Build docs
       run: npm run build
     - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3 # https://github.com/peaceiris/actions-gh-pages
+      uses: peaceiris/actions-gh-pages@v3 # https://github.com/peaceiris/actions-gh-page
       with:
         deploy_key: ${{ secrets.DEPLOY_KEY }}
         publish_dir: ./public
