@@ -4,3 +4,4 @@ node_modules
 index.html
 dist.json
 .DS_Store
+spec.json
