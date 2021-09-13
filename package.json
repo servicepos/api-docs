@@ -8,7 +8,7 @@
   },
   "private": true,
   "scripts": {
-    "start": "npx redoc-cli serve dist.json --options theme.json -t ./index-template.hbs",
+    "start": "npm run fetch-and-set && npx redoc-cli serve ./spec.json --options theme.json -t ./index-template.hbs",
     "bundle-markdown": "markdown-include ./markdown.json",
     "fetch-and-set": "npm run bundle-markdown && node fetch-and-set.js",
     "build": "npm run fetch-and-set && npx redoc-cli bundle ./spec.json -o ./public/index.html --options ./theme.json -t ./index-template.hbs"
