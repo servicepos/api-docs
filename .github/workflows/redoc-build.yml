@@ -1,5 +1,7 @@
 name: Build redoc
 on:
+  schedule:
+   - cron: '0 16,11 * * 1-5'
   push:
     branches:
       - master
