@@ -21,38 +21,7 @@ When the event triggers in our system, we will POST to the specified `url` with 
 Events can be:
 
 ```js
-product.created
-product.updated
-product.deleted
-supplier.updated
-supplier.deleted
-supplier.created
-pospayment.created
-posbalance.created
-customer.created
-customer.updated
-customer.deleted
-shoppinglistorder.created
-shoppinglistorder.deleted
-shoppinglistitem.created
-shoppinglistitem.updated
-shoppinglistitem.deleted
-customertags.created
-customertags.updated
-customertags.deleted
-customerarticle.created
-customerarticle.updated
-customerarticle.deleted
-taskmaterial.created
-taskmaterial.updated
-taskmaterial.deleted
-task.created
-task.updated
-task.deleted
-taskcomment.created
-taskcomment.updated
-taskcomment.deleted
-stocktransaction.committed
+#include "pages/_rest-hook-events.md"
 ```
 
 To unsubscribe
