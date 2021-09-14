@@ -9,7 +9,7 @@ axios.get(URL).then((res) => {
 
   // Set logo
   spec.info['x-logo'] = {
-    url: 'https://servicepos.com/wp-content/uploads/2021/08/servicepos-logo-01.svg',
+    url: 'https://raw.githubusercontent.com/servicepos/api-docs/master/public/servicepos-logo-01.svg',
     backgroundColor: '#FFFFFF',
     altText: 'ServicePOS Logo',
   }
