@@ -1,7 +1,7 @@
 {
   "theme": {
     "spacing": {
-      "sectionVertical": 0
+      "sectionVertical": 8
     },
     "colors": {
       "http": {
