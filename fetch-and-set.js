@@ -14,6 +14,27 @@ axios.get(URL).then((res) => {
     altText: 'ServicePOS Logo',
   }
 
+  let tags = []
+
+  // Get all the tags in the spec - pain
+  for (const path in spec.paths) {
+    for (const action in spec.paths[path]) {
+      if (spec.paths[path][action].tags !== undefined) {
+        tags.push(...spec.paths[path][action].tags)
+      }
+    }
+  }
+
+  // Remove duplicates
+  tags = tags.filter((value, index, self) => self.indexOf(value) === index)
+
+  spec['x-tagGroups'] = [
+    {
+      name: 'Endpoints',
+      tags: tags,
+    },
+  ]
+
   // Set description
   spec.info.description = description
 
