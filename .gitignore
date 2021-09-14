@@ -6,4 +6,3 @@ dist.json
 .DS_Store
 spec.json
 description.md
-pages/_rest-hook-events.md
