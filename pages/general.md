@@ -4,7 +4,7 @@
 
 **Important:** The API is forward-compatible. We take the freedom to add **optional** attributes to endpoints without updating the version number. In this case, you should be aware that a PUT request replaces an entire object. i.e. not specifying a field on an object will **null** the field. To update a single field on e.g. a product you must first GET the product and then PUT the entire product with the new updated field. See example below.
 
-## Auth
+## Authentication
 
 Send the header
 
