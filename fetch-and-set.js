@@ -19,3 +19,9 @@ axios.get(URL).then((res) => {
 
   fs.writeFileSync('./spec.json', JSON.stringify(spec))
 })
+
+// Fetch resthooks
+axios.get('https://app.deltateq.com/api/hooks/events').then((res) => {
+  let resthooks = res.data.items.join('\n')
+  fs.writeFileSync('./pages/_rest-hook-events.md', resthooks)
+})
