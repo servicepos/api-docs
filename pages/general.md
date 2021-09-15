@@ -8,7 +8,7 @@
 
 Send the header
 
-`Authtentication: Bearer <token>`
+`Authentication: Bearer <token>`
 
 `<token>` can be found at [https://app.detalteq.com/en](https://app.detalteq.com/en) -> Settings -> Generel -> Users. Only users that are not shop users have their API token displayed on the settings page.
 
