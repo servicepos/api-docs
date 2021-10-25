@@ -5,7 +5,6 @@ POST //api/pospayments HTTP/1.1
 Content-Type: application/json
 Authorization: Bearer <apitoken>
 Host: app.deltateq.com
-Content-Length: 250
 
 {
 	"articles": [
