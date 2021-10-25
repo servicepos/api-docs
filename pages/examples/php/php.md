@@ -1,6 +1,4 @@
-## PHP
-
-### Update the stock of a product
+## PHP: Update the stock of a product
 
 ```php
 <?php
