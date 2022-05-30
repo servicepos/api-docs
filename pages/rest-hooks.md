@@ -1,4 +1,4 @@
-# REST Hooks
+# Hooks
 
 The ServicePOS API supports [REST Hooks](http://resthooks.org/). This allows you to subscribe to events in our system and get notified via a callback url immediately.
 
@@ -30,7 +30,7 @@ You can also unsubscribe by returning status code 410 (Gone) when your callback 
 
 REST hooks can also be specified via the app under Settings -> API.
 
-If the request returns **408** (Request Timeout), **429** (Too Many Requests) or **5xx** (Server Error) the server will **retry every 10th minute.**
+If the request returns **408** (Request Timeout), **429** (Too Many Requests) or **5xx** (Server Error) the server will **retry a maximum of 3 times, with an increasing interval of 30, 60, and finally 120 minutes**, after which the hook will be considered failed.
 
 ## Suppress Hooks
 
