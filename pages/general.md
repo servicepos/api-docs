@@ -2,7 +2,9 @@
 
 ## Usage
 
-**Important:** The API is forward-compatible. We take the freedom to add **optional** attributes to endpoints without updating the version number. In this case, you should be aware that a PUT request replaces an entire object. i.e. not specifying a field on an object will **null** the field. To update a single field on e.g. a product you must first GET the product and then PUT the entire product with the new updated field. See example below.
+The API is forward-compatible. We take the freedom to add **optional** attributes to endpoints without notice. In this case, you should be aware that a PUT request replaces an entire object. i.e. not specifying a field on an object will **null** the field. To update a single field on e.g. a product you must first GET the product and then PUT the entire product with the new updated field. See example below.
+
+We may introduce breaking changes to endpoints. In such case, you will be contacted via the email provided at the API token setup page with a transition period. 
 
 ## Authentication
 
@@ -29,6 +31,11 @@ The current bucket size is 80 and the filling (regen) rate is 8 requests per sec
     "bucket_regen": "8"
 }
 ```
+
+We urge you to use the API in a fair manner, and not introducing unnecessary load. 
+Constantly retrieving all data or regularly updating the entire product catalog via bulk operations are examples of what we would consider unfair API usage.
+Instead, use hooks and only update changed products.
+Servicepos monitors API usage to identity excessive API usage. We will try to get in contact on excessive use, but we may be forced to reduce limits until the matter has been resolved.
 
 ## Configs
 
