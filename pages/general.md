@@ -35,7 +35,7 @@ The current bucket size is 80 and the filling (regen) rate is 8 requests per sec
 We urge you to use the API in a fair manner, and not introducing unnecessary load. 
 Constantly retrieving all data or regularly updating the entire product catalog via bulk operations are examples of what we would consider unfair API usage.
 Instead, use hooks and only update changed products.
-Servicepos monitors API usage to identity excessive API usage. We will try to get in contact on excessive use, but we may be forced to reduce limits until the matter has been resolved.
+Customers 1st monitors API usage to identity excessive API usage. We will try to get in contact on excessive use, but we may be forced to reduce limits until the matter has been resolved.
 
 ## Configs
 

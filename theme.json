@@ -5,10 +5,10 @@
     },
     "colors": {
       "http": {
-        "get": "#57B145"
+        "get": "#0000FF"
       },
       "primary": {
-        "main": "#57B145"
+        "main": "#0000FF"
       },
       "text": {
         "primary": "#21272F"

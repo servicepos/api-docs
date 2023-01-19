@@ -1,4 +1,4 @@
-# ServicePOS OpenAPI site
+# Customers 1st OpenAPI site
 
 ## Setup (development)
 

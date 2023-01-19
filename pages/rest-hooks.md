@@ -1,6 +1,6 @@
 # Hooks
 
-The ServicePOS API supports [REST Hooks](http://resthooks.org/). This allows you to subscribe to events in our system and get notified via a callback url immediately.
+The Customers 1st API supports [REST Hooks](http://resthooks.org/). This allows you to subscribe to events in our system and get notified via a callback url immediately.
 
 To listen for events,
 
@@ -36,7 +36,7 @@ If the request returns **408** (Request Timeout), **429** (Too Many Requests) or
 
 When using the API to make changes to your store, for instance create products, these interactions will trigger events like `product.created` just like using the app would.
 
-In some cases this behaviour is not desired since it can create infinite loops between services, for instance stock sync between ServicePOS and e-conomic.
+In some cases this behaviour is not desired since it can create infinite loops between services, for instance stock sync between Customers 1st and e-conomic.
 
 To avoid this, interact with the API with the following header
 `X-Suppress-Hooks:`
