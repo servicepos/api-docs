@@ -1,3 +1,6 @@
+inventorycount.created
+inventorycount.updated
+inventorycount.deleted
 product.created
 product.updated
 product.deleted
@@ -29,4 +32,6 @@ task.deleted
 taskcomment.created
 taskcomment.updated
 taskcomment.deleted
+servicesubscription.created
+servicesubscription.deleted
 stocktransaction.committed
