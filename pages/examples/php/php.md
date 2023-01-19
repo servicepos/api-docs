@@ -2,7 +2,7 @@
 
 ```php
 <?php
-class ServicePOSException extends Exception
+class Customers1stException extends Exception
 {
 	public $err;
 	public function __construct($error)
@@ -12,7 +12,7 @@ class ServicePOSException extends Exception
 	}
 }
 
-class ServicePOS
+class Custoemers1st
 {
 	private $token = null;
 
@@ -69,7 +69,7 @@ class ServicePOS
 
 
 try {
-    $servicepos = new ServicePOS('<token>');
+    $custoemers1st = new Custoemers1st('<token>');
 
     /* increase stock,
      * If you do not specify the cost price, we use the current average stock price */
@@ -78,19 +78,19 @@ try {
         'addtostock' => 5,
         'costpriceofaddeditems' => 100,
     ];
-    $servicepos->call('POST', '/stocktransactions', ['content' => $transaction]);
+    $custoemers1st->call('POST', '/stocktransactions', ['content' => $transaction]);
 
     /* decrease stock, costpriceofaddeditems must not be specified */
     $transaction = [
         'productid' => '<id>',
         'addtostock' => -2,
     ];
-    $servicepos->call('POST', '/stocktransactions', ['content' => $transaction]);
+    $custoemers1st->call('POST', '/stocktransactions', ['content' => $transaction]);
 
     /* update a product */
-    $product = $servicepos->call('GET', '/products/<id>')['content'];
+    $product = $custoemers1st->call('GET', '/products/<id>')['content'];
     $product['title'] = 'New title';
-    $product = $servicepos->call('PUT', '/products/<id>', ['content' => $product]);
+    $product = $custoemers1st->call('PUT', '/products/<id>', ['content' => $product]);
 } catch(Exception $e) {
     echo($e->err['result']);
 }
