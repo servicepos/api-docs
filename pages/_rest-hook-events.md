@@ -35,3 +35,5 @@ taskcomment.deleted
 servicesubscription.created
 servicesubscription.deleted
 stocktransaction.committed
+giftcard.created
+giftcard.updated

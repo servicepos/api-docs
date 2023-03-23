@@ -12,7 +12,7 @@ Send the header
 
 `Authentication: Bearer <token>`
 
-`<token>` can be found at [https://app.detalteq.com/en](https://app.detalteq.com/en) -> Settings -> API -> API users.
+`<token>` can be found at [https://app.deltateq.com/en](https://app.deltateq.com/en) -> Settings -> API -> API users.
 
 We recommand creating a new user for each integration.
 
