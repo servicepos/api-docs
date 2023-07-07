@@ -10,7 +10,7 @@ We may introduce breaking changes to endpoints. In such case, you will be contac
 
 Send the header
 
-`Authentication: Bearer <token>`
+`Authorization: Bearer <token>`
 
 `<token>` can be found at [https://app.deltateq.com/en](https://app.deltateq.com/en) -> Settings -> API -> API users.
 
