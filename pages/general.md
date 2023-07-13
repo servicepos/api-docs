@@ -14,7 +14,7 @@ Send the header
 
 `<token>` can be found at [https://app.deltateq.com/en](https://app.deltateq.com/en) -> Settings -> API -> API users.
 
-We recommand creating a new user for each integration.
+We recommend creating a new user for each integration.
 
 ## Rate limiting
 
