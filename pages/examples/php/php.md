@@ -12,7 +12,7 @@ class Customers1stException extends Exception
 	}
 }
 
-class Custoemers1st
+class Customers1st
 {
 	private $token = null;
 
@@ -69,7 +69,7 @@ class Custoemers1st
 
 
 try {
-    $custoemers1st = new Custoemers1st('<token>');
+    $customers1st = new Customers1st('<token>');
 
     /* increase stock,
      * If you do not specify the cost price, we use the current average stock price */
@@ -78,19 +78,19 @@ try {
         'addtostock' => 5,
         'costpriceofaddeditems' => 100,
     ];
-    $custoemers1st->call('POST', '/stocktransactions', ['content' => $transaction]);
+    $customers1st->call('POST', '/stocktransactions', ['content' => $transaction]);
 
     /* decrease stock, costpriceofaddeditems must not be specified */
     $transaction = [
         'productid' => '<id>',
         'addtostock' => -2,
     ];
-    $custoemers1st->call('POST', '/stocktransactions', ['content' => $transaction]);
+    $customers1st->call('POST', '/stocktransactions', ['content' => $transaction]);
 
     /* update a product */
-    $product = $custoemers1st->call('GET', '/products/<id>')['content'];
+    $product = $customers1st->call('GET', '/products/<id>')['content'];
     $product['title'] = 'New title';
-    $product = $custoemers1st->call('PUT', '/products/<id>', ['content' => $product]);
+    $product = $customers1st->call('PUT', '/products/<id>', ['content' => $product]);
 } catch(Exception $e) {
     echo($e->err['result']);
 }
