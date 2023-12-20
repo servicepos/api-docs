@@ -37,3 +37,5 @@ servicesubscription.deleted
 stocktransaction.committed
 giftcard.created
 giftcard.updated
+giftcard.deleted
+loyaltybalance.updated
