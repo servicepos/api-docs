@@ -1,6 +1,6 @@
 # Hooks
 
-The Customers 1st API supports [REST Hooks](http://resthooks.org/). This allows you to subscribe to events in our system and get notified via a callback url immediately.
+The Customers 1st API supports REST Hooks. This allows you to subscribe to events in our system and get notified via a callback url immediately.
 
 To listen for events,
 
