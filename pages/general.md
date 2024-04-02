@@ -1,5 +1,17 @@
 # General
 
+## Help and support
+
+If you have any questions regarding the API we are happy to help you via our API support at <api@c1st.com>.
+
+Please be specific and include the following information:
+
+ * A detailed description of the problem with a step-by-step description of what you do and what happens.
+ * Store details, specifically the StoreId.
+ * If possible, include a complete request and response.
+ * Screenshots, if possible.
+ * Other relevant or helpful information.
+
 ## Usage
 
 The API is forward-compatible. We take the freedom to add **optional** attributes to endpoints without notice. In this case, you should be aware that a PUT request replaces an entire object. i.e. not specifying a field on an object will **null** the field. To update a single field on e.g. a product you must first GET the product and then PUT the entire product with the new updated field. See example below.
