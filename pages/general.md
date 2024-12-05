@@ -24,7 +24,7 @@ Send the header
 
 `Authorization: Bearer <token>`
 
-`<token>` can be found at [https://app.deltateq.com/en](https://app.deltateq.com/en) -> Settings -> API -> API users.
+`<token>` can be found at [https://app.c1st.com/en](https://app.c1st.com/en) -> Settings -> API -> API users.
 
 We recommend creating a new user for each integration.
 
@@ -51,4 +51,4 @@ Customers 1st monitors API usage to identity excessive API usage. We will try to
 
 ## Configs
 
-A list of settings configs can be found [here](https://app.deltateq.com/doc/api/configs.php)
+A list of settings configs can be found [here](https://api.c1st.com/doc/api/configs.php)

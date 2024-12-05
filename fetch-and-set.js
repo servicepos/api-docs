@@ -1,4 +1,4 @@
-const URL = 'https://app.deltateq.com/doc/api/openapi.json'
+const URL = 'https://api.c1st.com/doc/api/openapi.json'
 const axios = require('axios')
 const fs = require('fs')
 
@@ -42,7 +42,7 @@ axios.get(URL).then((res) => {
 })
 
 // Fetch resthooks
-axios.get('https://app.deltateq.com/api/hooks/events').then((res) => {
+axios.get('https://api.c1st.com/api/hooks/events').then((res) => {
   let resthooks = res.data.items.join('\n')
   fs.writeFileSync('./pages/_rest-hook-events.md', resthooks)
 })
