@@ -6,7 +6,7 @@ A common operation you might want to do is fetch all the products from Customers
 ```bash
 curl \
   -H 'Content-Type: application/json' \
-  https://app.deltateq.com/api/products?updated_after=2023-12-19 00:00:00
+  https://api.c1st.com/api/products?updated_after=2023-12-19 00:00:00
 ```
 
 This would then return a list of products updated after that date. If the amount of products changed are greater than 50 you would still have to paginate through the list using the `paginationStart` query paramater like usual.
@@ -17,5 +17,5 @@ To achive the same for stocktransaction, the request is almost the same as the e
 ```bash
 curl \
   -H 'Content-Type: application/json' \
-  https://app.deltateq.com/api/stocktransactions?committed_after=2023-12-19 00:00:00
+  https://api.c1st.com/api/stocktransactions?committed_after=2023-12-19 00:00:00
 ```

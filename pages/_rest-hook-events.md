@@ -1,9 +1,12 @@
+notification.created
 inventorycount.created
 inventorycount.updated
 inventorycount.deleted
 product.created
 product.updated
 product.deleted
+inventorylevel.updated
+inventorylevel.created
 supplier.updated
 supplier.deleted
 supplier.created
@@ -39,3 +42,7 @@ giftcard.created
 giftcard.updated
 giftcard.deleted
 loyaltybalance.updated
+salesorder.created
+salesorder.updated
+salesorderfulfillment.created
+salesorderfulfillment.updated
