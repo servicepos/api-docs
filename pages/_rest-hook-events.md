@@ -5,6 +5,7 @@ inventorycount.deleted
 product.created
 product.updated
 product.deleted
+productdata.updated
 inventorylevel.updated
 inventorylevel.created
 supplier.updated
@@ -16,6 +17,7 @@ customer.created
 customer.updated
 customer.deleted
 shoppinglistorder.created
+shoppinglistorder.committed
 shoppinglistorder.deleted
 shoppinglistitem.created
 shoppinglistitem.updated
@@ -38,6 +40,10 @@ taskcomment.deleted
 servicesubscription.created
 servicesubscription.deleted
 stocktransaction.committed
+stocktransactionlist.created
+stocktransactionlist.updated
+stocktransactionlist.committed
+stocktransactionlist.deleted
 giftcard.created
 giftcard.updated
 giftcard.deleted
@@ -46,3 +52,6 @@ salesorder.created
 salesorder.updated
 salesorderfulfillment.created
 salesorderfulfillment.updated
+payout.created
+payout.updated
+payout.booked
