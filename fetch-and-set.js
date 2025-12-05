@@ -43,6 +43,7 @@ axios.get(URL).then((res) => {
 
 // Fetch resthooks
 axios.get('https://api.c1st.com/api/hooks/events').then((res) => {
-  let resthooks = res.data.items.join('\n')
+  let resthooks = res.data.items.map((item) => item.key).join('\n')
+
   fs.writeFileSync('./pages/_rest-hook-events.md', resthooks)
 })
