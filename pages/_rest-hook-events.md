@@ -55,3 +55,6 @@ salesorderfulfillment.updated
 payout.created
 payout.updated
 payout.booked
+promotion.created
+promotion.updated
+promotion.deleted
