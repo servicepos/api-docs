@@ -2,7 +2,7 @@
 
 ## Setup (development)
 
-Run `npm run start` to start a local instance of the ReDoc site - be aware that this dosen't watch for changes in the pages markdown
+Run `npm run start` to start a local instance of the site - be aware that this dosen't watch for changes in the pages markdown
 
 ## Pages
 
@@ -10,10 +10,8 @@ Extra information like code examples and general information about the api is or
 
 ## Scripts
 
-`npm run build`: This bundles the pages markdown, then fetches the remote openapi.json from [here](https://api.c1st.com/doc/api/openapi.json) and builds a zero-dep static html file from that.
+`npm run build`: This bundles the pages markdown, then fetches the remote openapi.json from [here](https://api.c1st.com/doc/api/openapi.json) and copies it next to `index-template.html` in `public/`. The page renders it with [Scalar](https://github.com/scalar/scalar), which only renders what's on screen; ReDoc rendered all endpoints up front and froze browsers.
 
-## Changing the theme and html
+## Changing the html
 
-To update/change the theme edit the `theme.json` file, available theme options can be found at [ReDoc docs](https://redoc.ly/docs/api-reference-docs/configuration/theming/)
-
-To change the html (change font, favicon etc) edit the `index-template.hbs`
+To change the page (favicon, Scalar version or [configuration](https://github.com/scalar/scalar/blob/main/documentation/configuration.md)) edit `index-template.html`. Keep the slug options there: they keep old ReDoc links like `#tag/Products/operation/searchProduct` working.

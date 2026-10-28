@@ -58,3 +58,6 @@ payout.booked
 promotion.created
 promotion.updated
 promotion.deleted
+verifiedsupplier.store.connected
+verifiedsupplier.store.disconnected
+verifiedsupplier.orderlist.created
