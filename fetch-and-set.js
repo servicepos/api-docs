@@ -7,13 +7,6 @@ const description = fs.readFileSync('./description.md').toString()
 axios.get(URL).then((res) => {
   let spec = res.data
 
-  // Set logo
-  spec.info['x-logo'] = {
-    url: 'https://raw.githubusercontent.com/servicepos/api-docs/master/public/customers1st-logo.svg',
-    backgroundColor: '#FFFFFF',
-    altText: 'Customers 1st Logo',
-  }
-
   let tags = []
 
   // Get all the tags in the spec - pain
