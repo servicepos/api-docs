@@ -31,6 +31,13 @@ axios.get(URL).then((res) => {
   // Set description
   spec.info.description = description
 
+  // redocly join drops the header's root servers/security and leaves `servers: []` on every path
+  spec.servers = [{ url: 'https://api.c1st.com/api' }]
+  spec.security = [{ bearerAuth: [] }]
+  for (const path in spec.paths) {
+    delete spec.paths[path].servers
+  }
+
   fs.writeFileSync('./spec.json', JSON.stringify(spec))
 })
 
