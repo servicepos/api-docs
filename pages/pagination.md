@@ -4,19 +4,12 @@
 
 Endpoints that have been migrated to cursor-based pagination accept a `cursor` query parameter. **Use cursor-based pagination whenever an endpoint supports it.** It stays fast regardless of how deep you page, and you will not skip or receive duplicate items when data is created or deleted while you are paging.
 
-The following endpoints support cursor-based pagination:
-
-| Endpoint | Next cursor in response |
-| --- | --- |
-| `GET /products` | `nextCursor` |
-| `GET /inventorylevels` | `meta.next_cursor` |
-| `GET /verified-suppliers/sales` | `nextCursor` |
-| `GET /verified-suppliers/inventory` | `nextCursor` |
+Check the documentation of each endpoint to see whether it supports the `cursor` parameter, and which response field holds the next cursor.
 
 To page through the results:
 
 1. Make the first request with an empty `cursor` parameter, e.g. `?cursor=&paginationPageLength=250`.
-2. Read the next cursor from the response and pass it unchanged as `cursor` in the next request. Keep all other query parameters the same.
+2. Read the next cursor from the response (see the endpoint's documentation for the field name) and pass it unchanged as `cursor` in the next request. Keep all other query parameters the same.
 3. Repeat until the next cursor is `null`.
 
 ```bash
@@ -38,6 +31,6 @@ For example, if you want to access the third page of a pagination with 10 items 
 
 `?paginationStart=20&paginationPageLength=10`
 
-Offset-based pagination is still supported on `GET /products` and `GET /inventorylevels` for backwards compatibility, but we recommend switching to cursor-based pagination on these endpoints.
+Some endpoints support both methods for backwards compatibility. On those endpoints we recommend switching to cursor-based pagination.
 
 For all endpoints `paginationPageLength` is limited to **250**. We are currently working on implementing this limit.
