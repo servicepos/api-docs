@@ -15,11 +15,11 @@ To page through the results:
 ```bash
 curl \
   -H 'Content-Type: application/json' \
-  'https://app.deltateq.com/api/products?cursor=&paginationPageLength=250'
+  'https://api.c1st.com/api/products?cursor=&paginationPageLength=250'
 
 curl \
   -H 'Content-Type: application/json' \
-  'https://app.deltateq.com/api/products?cursor=eyJQcm9kdWN0LmlkIjoxMjM0LCJfcG9pbnRzVG9OZXh0SXRlbXMiOnRydWV9&paginationPageLength=250'
+  'https://api.c1st.com/api/products?cursor=eyJQcm9kdWN0LmlkIjoxMjM0LCJfcG9pbnRzVG9OZXh0SXRlbXMiOnRydWV9&paginationPageLength=250'
 ```
 
 Treat the cursor as an opaque string: do not decode, modify or build it yourself. When `cursor` is set, `paginationStart` is ignored, and cursor-based pagination is only allowed with the default sorting or sorting by id.
