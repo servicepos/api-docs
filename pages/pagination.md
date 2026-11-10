@@ -33,4 +33,4 @@ For example, if you want to access the third page of a pagination with 10 items 
 
 Some endpoints support both methods for backwards compatibility. On those endpoints we recommend switching to cursor-based pagination.
 
-For all endpoints `paginationPageLength` is limited to **250**. We are currently working on implementing this limit.
+`paginationStart` is limited to **2500**. To page beyond the first 2500 items, use cursor-based pagination.
