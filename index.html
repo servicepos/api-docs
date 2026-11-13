@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>API Reference | Customers 1st</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="customers1st-favicon.ico" />
+    <style>
+      .t-doc__sidebar::before {
+        content: '';
+        flex-shrink: 0;
+        height: 32px;
+        margin: 20px 24px 8px;
+        background: url('customers1st-logo.svg') no-repeat left center / contain;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script>
+      // Keep old Redoc links working: #section/General/Fair-usage -> #description/fair-usage
+      const redocSection = location.hash.match(/^#section\/(?:.*\/)?([^/]+)$/)
+      if (redocSection) {
+        history.replaceState(null, '', '#description/' + redocSection[1].toLowerCase())
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@scalar/api-reference@1.73.1"></script>
+    <script>
+      Scalar.createApiReference('#app', {
+        url: 'spec.json',
+        favicon: 'customers1st-favicon.ico',
+        // Same hashes as Redoc: #tag/Products/operation/searchProduct, #tag/X/paths/~1path/post
+        generateTagSlug: (tag) => tag.name.replace(/\s+/g, '-').replace(/-+/g, '-'),
+        generateOperationSlug: (op) =>
+          op.operationId ? `operation/${op.operationId}` : `paths/${op.path.replaceAll('/', '~1')}/${op.method.toLowerCase()}`,
+        agent: { disabled: true },
+        mcp: { disabled: true },
+        forceDarkModeState: 'light',
+        hideDarkModeToggle: true,
+      })
+    </script>
+  </body>
+</html>
